@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  bastambalive:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  webapplication5:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  bastambalive:
+    image: bastambalive
+    build:
+      context: ./BASTAMBALive
+      dockerfile: Dockerfile
+
+  webapplication5:
+    image: webapplication5
+    build:
+      context: ./../WebApplication5
+      dockerfile: Dockerfile
