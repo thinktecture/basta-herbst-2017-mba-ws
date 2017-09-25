@@ -6,9 +6,3 @@ services:
     build:
       context: ./BASTAMBALive
       dockerfile: Dockerfile
-
-  webapplication5:
-    image: webapplication5
-    build:
-      context: ./../WebApplication5
-      dockerfile: Dockerfile

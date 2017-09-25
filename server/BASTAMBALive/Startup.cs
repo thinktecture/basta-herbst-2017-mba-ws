@@ -24,6 +24,7 @@ namespace BASTAMBALive
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc();
 
             services.AddSwaggerGen(c =>
@@ -39,6 +40,13 @@ namespace BASTAMBALive
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(policy =>
+            {
+                policy.AllowAnyOrigin();
+                policy.AllowAnyHeader();
+                policy.AllowAnyMethod();
+            });
 
             app.UseMvc();
 
