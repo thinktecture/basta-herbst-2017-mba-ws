@@ -1,0 +1,18 @@
+<h1>PASTA! Dishes List</h1>
+
+<a [routerLink]="['/create']" class="btn btn-primary">Create</a>
+
+<div class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dish of dishes">
+            <td [routerLink]="['/detail', dish.id]">
+                {{ dish.name }}
+            </td>
+        </tr>
+    </tbody>
+</div>
